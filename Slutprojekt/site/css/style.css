@@ -1,0 +1,48 @@
+@media only screen and (max-device-width: 455px) {
+    body {
+        background-color: black;
+        height: 200vh;
+        width: 100vw;
+        margin: 0;
+    } 
+
+    div.wrapper {
+        display: grid;
+        height: inherit;
+        width: inherit;
+        grid-template-rows: 80px 700px auto 160px
+    }
+
+    header {
+        grid-row: 1/2;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 0px 48px auto 48px 0px;
+        grid-template-rows: 12px 1fr 12px;
+        grid-column-gap: 12px;
+    }
+
+    .menuicon {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        display:flex;
+        justify-content:center;
+        align-items:center; 
+        color: rgba(0, 0, 0, 0.54);
+    }
+
+    .bg-menuicon {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 48px; 
+        height: 48px;
+        background: url('../img/css_sprites.png') -10px -10px;
+        grid-row: 2/3;
+        grid-column: 2/3;
+        display:flex;
+        justify-content:center;
+        align-items:center; 
+        /* : rgba(0, 0, 0, 0.54); */
+    }
+
+}
