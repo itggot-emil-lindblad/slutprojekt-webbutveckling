@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Prästkragens Förskola</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <script src="js/menutoggle.js"></script>
+    <script src="js/scrollbutton.js"></script>
     <div class="wrapper">
         <div class="hamburgermenu">
             <i class="material-icons" onclick="toggleMenu()">chevron_left</i>  
@@ -18,9 +20,14 @@
             <i class="material-icons" onclick="toggleMenu()" >menu</i>
         </header>
         <div class="mainimg">
-            <i class="material-icons">arrow_downward</i>
+            <a href="#main">
+                <i class="material-icons">arrow_downward</i>
+            </a>
         </div>
-        <main></main>
+        <main id=main>
+            <h1>Välkommen!</h1> 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure magnam, tempora eveniet quos maiores facere itaque numquam ipsa consequuntur rem blanditiis placeat voluptas molestiae mollitia totam nisi commodi aperiam culpa animi modi recusandae explicabo? Dolor perferendis dolores, quia aliquid excepturi cupiditate tempora itaque inventore numquam vel, mollitia assumenda delectus expedita! Debitis minima voluptatibus illo excepturi aliquam, molestiae ab numquam libero.</p> 
+        </main>
     </div>
 </body>
 </html>

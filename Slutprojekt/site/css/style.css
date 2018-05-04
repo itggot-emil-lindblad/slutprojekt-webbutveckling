@@ -10,7 +10,7 @@
         display: grid;
         height: inherit;
         width: inherit;
-        grid-template-rows: 80px 700px auto 160px
+        grid-template-rows: 80px 702px 100vh 160px
     }
 
     header {
@@ -65,11 +65,12 @@
         grid-row: 2/3;
         grid-column: 1/1;
         display: grid;
-        grid-template-rows: repeat(9, 78px);
+        grid-template-rows: repeat(9, 1fr);
         grid-template-columns: repeat(7,1fr);
+        background-color: red;
     }
 
-    div.mainimg i.material-icons {
+    div.mainimg a :first-child {
         grid-row: 8/9;
         grid-column: 4/5;
         font-size: 48px;
@@ -77,10 +78,38 @@
         display:flex;
         justify-content:center;
         align-items:center;
+        text-decoration: none;
+    }
+
+    div.mainimg a {
+        grid-row: 8/9;
+        grid-column: 4/5;
+        font-size: 48px;
+        color: rgba(0, 0, 0, 0.54);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-decoration: none;
     }
 
     main {
-        
+        grid-row: 3/4;
+        grid-column: 1/2;
+        background-color: white;
+        display: grid;
+        grid-template-rows: repeat(10, 1fr);
+        grid-template-columns: repeat(10, 1fr);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main h1 {
+        grid-row: 2/3;
+        grid-column: 4/8;
+    }
+
+    main p {
+        grid-row: 3/6;
+        grid-column: 2/10;
     }
 
 }
