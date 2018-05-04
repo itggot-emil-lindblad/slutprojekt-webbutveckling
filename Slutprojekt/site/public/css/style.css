@@ -97,19 +97,48 @@
         grid-column: 1/2;
         background-color: white;
         display: grid;
-        grid-template-rows: repeat(10, 1fr);
+        grid-template-rows: repeat(14, 1fr);
         grid-template-columns: repeat(10, 1fr);
         font-family: Arial, Helvetica, sans-serif;
     }
 
     main h1 {
-        grid-row: 2/3;
+        grid-row: 2;
         grid-column: 4/8;
+        color: black;
     }
 
     main p {
-        grid-row: 3/6;
+        grid-row: 3/8;
         grid-column: 2/10;
+        color 
+    }
+
+    div.verksamhetbtn {
+        border-color: black;
+        border: solid 2px;
+        border-radius: 30px;
+        grid-row: 8;
+        grid-column: 2/5;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    div.verksamhetbtn a {
+        text-decoration: none;
+        color: black;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    div.infobtn {
+        border-color: black;
+        border: solid 2px;
+        border-radius: 30px;
+        grid-row: 8;
+        grid-column: 7/10;
     }
 
 }
