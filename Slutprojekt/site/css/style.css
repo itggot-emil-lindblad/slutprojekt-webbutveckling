@@ -1,21 +1,25 @@
 @media only screen and (max-device-width: 455px) {
+   
+    /* General rules */
+
     body {
         background-color: rgb(180, 180, 180);
-        height: 300vh;
+        height: auto;
         width: 100vw;
         margin: 0;
     } 
 
     div.wrapper {
-        display: grid;
+        /* display: grid; */
         height: inherit;
         width: inherit;
-        grid-template-rows: 80px 702px 378px 100vh 160px
+        grid-template-rows: 80px auto;
     }
 
     header {
         grid-row: 1/2;
         background-color: white;
+        height: 80px;
         display: grid;
         grid-template-columns: 0px 48px auto 48px 0px;
         grid-template-rows: 12px 1fr 12px;
@@ -49,6 +53,13 @@
     div.show {
         transform: translateX(0);        
     }
+    /* End of general rules */
+
+    /* Rules for index.html */
+    div.content {
+        display: grid;
+        grid-template-rows: 0px 702px 378px 100vh 160px;
+    }
     
 
     div.hamburgermenu i.material-icons {
@@ -61,7 +72,7 @@
         align-items:center; 
     }
 
-    div.mainimg {
+     div.mainimg {
         grid-row: 2/3;
         grid-column: 1/1;
         display: grid;
@@ -70,7 +81,7 @@
         background-color: rgb(73, 25, 25);
     }
 
-    div.mainimg a :first-child {
+     div.mainimg a :first-child {
         grid-row: 8/9;
         grid-column: 4/5;
         font-size: 48px;
@@ -81,7 +92,7 @@
         text-decoration: none;
     }
 
-    div.mainimg a {
+     div.mainimg a {
         grid-row: 8/9;
         grid-column: 4/5;
         font-size: 48px;
@@ -92,7 +103,7 @@
         text-decoration: none;
     }
 
-    main {
+     main {
         grid-row: 3/4;
         grid-column: 1/2;
         background-color: white;
@@ -102,18 +113,18 @@
         font-family: Arial, Helvetica, sans-serif;
     }
 
-    main h1 {
+     main h1 {
         grid-row: 2;
         grid-column: 4/8;
         color: black;
     }
 
-    main p {
+     main p {
         grid-row: 3/8;
         grid-column: 2/10;
     }
 
-    div.verksamhetbtn {
+     div.verksamhetbtn {
         border-color: black;
         border: solid 2px;
         border-radius: 30px;
@@ -124,7 +135,7 @@
         align-items:center;
     }
 
-    div.verksamhetbtn a {
+     div.verksamhetbtn a {
         text-decoration: none;
         color: black;
         display:flex;
@@ -132,7 +143,7 @@
         align-items:center;
     }
 
-    div.infobtn {
+     div.infobtn {
         border-color: black;
         border: solid 2px;
         border-radius: 30px;
@@ -143,7 +154,7 @@
         align-items:center;
     }
 
-    div.infobtn a {
+     div.infobtn a {
         text-decoration: none;
         color: black;
         display:flex;
@@ -151,7 +162,7 @@
         align-items:center;
     }
 
-    div.news {
+     div.news {
         height: 100vh;
         grid-row: 4;
         grid-column: 1;
@@ -162,9 +173,36 @@
         overflow: auto;
     }
 
-    div.news div#article1 {
+     div.news div#article1 {
         display: grid;
         grid-column: 3/7;
         background-color: white;
     }
+    
+    /* End of rules for index.html */
+    div.tabs {
+        background-color: #5a5a5a;
+        height: 60px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    ul {
+        list-style-type: none;
+        padding: none;
+        margin: 0;
+        width: 100vw;
+        height: 60px;
+        overflow: hidden;
+    }
+
+    ul li {
+        float: left;
+        padding: 2px;
+        display: block;
+        width: 20px;
+    }
+    /* Rules for info.html */
+
+
 }
