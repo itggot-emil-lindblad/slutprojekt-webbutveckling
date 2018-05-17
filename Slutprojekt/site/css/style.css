@@ -174,35 +174,51 @@
     }
 
      div.news div#article1 {
-        display: grid;
+        display: block;
+        grid-row: 2/3;
         grid-column: 3/7;
         background-color: white;
+        min-height: 100%;
     }
     
     /* End of rules for index.html */
-    div.tabs {
-        background-color: #5a5a5a;
-        height: 60px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-    }
 
-    ul {
-        list-style-type: none;
-        padding: none;
-        margin: 0;
+    /* Rules for info.html */
+    div.tabs {
+        background-color: #f0f0f0;
         width: 100vw;
         height: 60px;
-        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, 1fr);
     }
 
-    ul li {
-        float: left;
-        padding: 2px;
-        display: block;
-        width: 20px;
-    }
-    /* Rules for info.html */
+    div.navtab {
+        grid-column: span 1;
+        font-family: 'Roboto', san-serif;
+        font-size: 8px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        color: rgba(0, 0, 0, 0.54);
+        border-top: solid 2px rgba(255, 255, 255, 0);
+        border-bottom: solid 2px rgba(255, 255, 255, 0);
 
+    }
+
+    .navtab.active {
+        background-color: white;
+        border-bottom: solid 2px black;
+
+    }
+
+    div.infopage {
+        display: none
+    }
+
+    .infopage.active {
+        display: grid;
+
+    }
 
 }
