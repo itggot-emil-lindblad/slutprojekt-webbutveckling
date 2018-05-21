@@ -1,7 +1,7 @@
 @media only screen and (max-device-width: 455px) {
    
-    /* General rules */
-
+    /* #General rules */
+    /* #region */
     body {
         background-color: rgb(180, 180, 180);
         height: auto;
@@ -37,6 +37,11 @@
         align-items:center; 
     }
     
+    header img {
+        grid-row: 2;
+        grid-column: 3;
+        padding-left: 48.75px;
+    }
     div.hamburgermenu {
         transform: translateX(-100%);
         transition: transform 0.5s;
@@ -44,33 +49,52 @@
         height: 100vh;
         width: 70vw;
         z-index: 99;
-        background-color: gray;
+        background-color: #35414D;
         display: grid;
-        grid-template-rows: 12px 56px 12px;
-        grid-template-columns: 0px 48px auto;
-        grid-column-gap: 12px;
+        grid-template-rows: repeat(9, 80px);
+        grid-template-columns: 1fr;
     }
     
     div.show {
         transform: translateX(0);        
     }
-    /* End of general rules */
 
-    /* Rules for index.html */
-    div.content {
+    div.menuclose {
+        grid-row: 1;
+        grid-column: 1;
         display: grid;
-        grid-template-rows: 0px 702px 378px 100vh 160px;
+        grid-template-rows: 12px 56px 12px;
+        grid-template-columns: 0px 48px auto;
+        grid-column-gap: 12px;    
     }
-    
 
-    div.hamburgermenu i.material-icons {
+    div.menuclose i {
+        color: white;
         font-size: 48px;
-        color: rgba(0, 0, 0, 0.54);
         grid-row: 2/3;
         grid-column: 2/3;
         display:flex;
         justify-content:center;
         align-items:center; 
+    }
+
+    .navlink {
+        font-size: 24px;
+        text-decoration: none;
+        color: white;
+        display:flex;
+        justify-content:center;
+        align-items:center; 
+    }
+    /* #endregion */
+    /* End of general rules */
+    
+    
+    /* Rules for index.html */
+    /* #region */
+    div.content {
+        display: grid;
+        grid-template-rows: 0px 702px 378px 100vh;
     }
 
      div.mainimg {
@@ -199,6 +223,7 @@
     }
 
     footer {
+        height: 160px;
         grid-row: 5;
         background-color: #35414d;
         display: grid;
@@ -237,9 +262,27 @@
         grid-column: 2/8;
         border-bottom: 1px solid white;
     }
+
+    .bg-facebookwhite40 {
+        width: 40px; 
+        height: 40px;
+        background: url('../img/css_sprites.png') -10px -10px;
+        grid-row: 4/6;
+        grid-column: 2;
+    }
+
+    .bg-instagramwhite40 {
+        width: 40px; 
+        height: 40px;
+        background: url('../img/css_sprites.png') -70px -10px;
+        grid-row: 4/6;
+        grid-column: 7;
+    }
+    /* #endregion */
     /* End of rules for index.html */
 
     /* Rules for info.html */
+    /* #region */
     div.tabs {
         background-color: #f0f0f0;
         width: 100vw;
@@ -276,5 +319,7 @@
         display: grid;
 
     }
+    /* #endregion */
+    /* End of rules for info.html */
 
 }

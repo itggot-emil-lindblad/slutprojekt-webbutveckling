@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Prästkragens Förskola</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
@@ -15,10 +15,18 @@
     <script src="js/scrollbutton.js"></script>
     <div class="wrapper">
         <div class="hamburgermenu">
-            <i class="material-icons" onclick="toggleMenu()">chevron_left</i>  
+            <div class="menuclose">
+                <i class="material-icons" onclick="toggleMenu()">chevron_left</i>
+            </div> 
+        <a href="index.html" class="navlink" id="startpage">Startsidan</a>
+        <a href="info.html" class="navlink" id="infopage">Information</a>
+        <a href="" class="navlink" id="contactpage">Kontakt</a>
+        <a href="" class="navlink" id="Lorempage">Lorem</a>
         </div>
     <header>
         <i class="material-icons" onclick="toggleMenu()" >menu</i>
+        <!--"Icons made by http://www.freepik.com" Freepik "https://www.flaticon.com/" Flaticon" www.flaticon.com is licensed by http://creativecommons.org/licenses/by/3.0/" Creative Commons BY 3.0"-->
+        <img src="img/logo.png" alt="Prästkragens Förskola">
     </header>
     <script src="js/tabnavigation.js"></script>
 <div class="tabs">
@@ -63,6 +71,15 @@
     <p>Loremhej ipsum dolor sit amet 
         consectetur adipisicing elit. Ducimus, aspernatur.</p>
 </div>
+    <footer>
+        <h4>Prästkragens Förskola</h4>
+        <a href="" class="contactbtn">Kontakt</a>
+        <a href="https://www.facebook.com/Pr%C3%A4stkragens-F%C3%B6rskola-210900089034186/" class="bg-facebookwhite40"></a>
+        <a href="https://www.instagram.com" class="bg-instagramwhite40"></a>
+
+        <div class="line"></div>
+        <p>Lorizzle ipsum dolor check it out bling bling</p>
+    </footer>
     </div>
 </body>
 </html>
