@@ -20,18 +20,29 @@
             </div> 
         <a href="index.html" class="navlink" id="startpage">Startsidan</a>
         <a href="info.html" class="navlink" id="infopage">Information</a>
-        <a href="" class="navlink" id="contactpage">Kontakt</a>
+        <a href="kontakt.html" class="navlink" id="contactpage">Kontakt</a>
         <a href="" class="navlink" id="Lorempage">Lorem</a>
         </div>
-    <header>
+    <header class="mobile">
         <i class="material-icons" onclick="toggleMenu()" >menu</i>
         <!--"Icons made by http://www.freepik.com" Freepik "https://www.flaticon.com/" Flaticon" www.flaticon.com is licensed by http://creativecommons.org/licenses/by/3.0/" Creative Commons BY 3.0"-->
-        <img src="img/logo.png" alt="Prästkragens Förskola">
+        <a href="index.html">
+            <img src="img/logo.png" alt="Prästkragens Förskola">
+        </a>
+    </header>
+    <header class="desktop">
+        <a href="index.html">
+            <img src="img/logo.png" alt="Prästkragens Förskola">
+        </a>
+        <a href="index.html" class="navlink" id="startpage">Startsidan</a>
+        <a href="info.html" class="navlink" id="infopage">Information</a>
+        <a href="kontakt.html" class="navlink" id="contactpage">Kontakt</a>
+        <a href="" class="navlink" id="lorempage">Lorem</a>
     </header>
     <%= yield %>
     <footer>
         <h4>Prästkragens Förskola</h4>
-        <a href="" class="contactbtn">Kontakt</a>
+        <a href="kontakt.html" class="contactbtn">Kontakt</a>
         <a href="https://www.facebook.com/Pr%C3%A4stkragens-F%C3%B6rskola-210900089034186/" class="bg-facebookwhite40"></a>
         <a href="https://www.instagram.com" class="bg-instagramwhite40"></a>
 

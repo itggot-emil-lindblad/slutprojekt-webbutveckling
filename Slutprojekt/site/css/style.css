@@ -17,7 +17,11 @@
         grid-template-rows: 80px auto;
     }
 
-    header {
+    header.desktop {
+        display: none;
+    }
+
+    header.mobile {
         grid-row: 1/2;
         background-color: white;
         height: 80px;
@@ -27,7 +31,7 @@
         grid-column-gap: 12px;
     }
 
-    header i.material-icons {
+    header.mobile i.material-icons {
         grid-row: 2/3;
         grid-column: 2/3;
         font-size: 48px;
@@ -37,7 +41,7 @@
         align-items:center; 
     }
     
-    header img {
+    header.mobile a {
         grid-row: 2;
         grid-column: 3;
         padding-left: 48.75px;
@@ -74,8 +78,8 @@
         grid-row: 2/3;
         grid-column: 2/3;
         display:flex;
-        justify-content:center;
-        align-items:center; 
+        justify-content: left;
+        align-items: left; 
     }
 
     .navlink {
@@ -83,8 +87,9 @@
         text-decoration: none;
         color: white;
         display:flex;
-        justify-content:center;
-        align-items:center; 
+        justify-content: center;
+        align-items: center; 
+
     }
     /* #endregion */
     /* End of general rules */
@@ -176,8 +181,6 @@
         text-decoration: none;
     }
 
-    }
-
      div.news {
         height: 100vh;
         grid-row: 4;
@@ -226,6 +229,7 @@
         height: 160px;
         grid-row: 5;
         background-color: #35414d;
+        background-image: linear-gradient(#35414d, #1b2127);
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(7, 1fr);
@@ -311,15 +315,122 @@
 
     }
 
+    
+    .infopage.active {
+        display: grid;
+        height: 1000px;
+    }
+    
+    div#personal {
+        background-color: aqua;
+        grid-template-columns: repeat(9, 50px);
+        grid-template-rows: repeat(13, 70px);
+        
+    }
     div.infopage {
         display: none;
     }
 
-    .infopage.active {
-        display: grid;
+    div.staffbio {
+        height: 350px;
+        width: 150px;
+    }
 
+    div#lena {
+        grid-column: 2/4;
+        grid-row: 2/6;
+    }
+
+    div#sara {
+        grid-column: 6/8;
+        grid-row: 2/6;
+    }
+
+    div#camilla {
+        grid-column: 2/4;
+        grid-row: 8/12;
+    }
+
+    div#elin {
+        grid-column: 6/8;
+        grid-row: 8/12;
     }
     /* #endregion */
     /* End of rules for info.html */
 
 }
+
+/* Desktop */
+body {
+    background-color: rgb(180, 180, 180);
+    height: auto;
+    width: 100vw;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+} 
+
+div.wrapper {
+    /* display: grid; */
+    height: inherit;
+    width: inherit;
+    grid-template-rows: 80px auto;
+}
+
+header.mobile {
+    display: none;
+}
+
+header.desktop {
+    height: 80px;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 0px 1fr 0px;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.navlink {
+    font-size: 12px;
+    height: 54px;
+    text-decoration: none;
+    color: black;
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+header.desktop a:first-of-type {
+    grid-row: 2;
+    grid-column: 4;
+    /* padding-left: 48.75px; */
+}
+
+div.hamburgermenu {
+    display: none;
+}
+
+a#startpage {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+a#infopage {
+    grid-row: 2;
+    grid-column: 3;
+}
+
+a#contactpage {
+    grid-row: 2;
+    grid-column: 5;
+}
+
+a#lorempage {
+    grid-row: 2;
+    grid-column: 6;
+}
+
+div.content {
+    display: none;
+}
+
+
+
