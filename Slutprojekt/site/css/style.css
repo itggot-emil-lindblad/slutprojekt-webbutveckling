@@ -1,3 +1,111 @@
+/* Desktop */
+/* #region */
+body {
+    background-color: rgb(180, 180, 180);
+    height: auto;
+    width: 100vw;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+} 
+
+div.wrapper {
+    /* display: grid; */
+    height: inherit;
+    width: inherit;
+    grid-template-rows: 80px auto;
+}
+
+header.mobile {
+    display: none;
+}
+
+header.desktop {
+    width: 100vw;
+    height: 80px;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 12px 1fr 12px;
+    grid-template-columns: repeat(7, 1fr);
+    position: fixed;
+    top: 0px;
+}
+
+.navlink {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.54);
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+header.desktop a:first-of-type {
+    grid-row: 2;
+    grid-column: 4;
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+div.hamburgermenu {
+    display: none;
+}
+
+a#startpage {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+a#infopage {
+    grid-row: 2;
+    grid-column: 3;
+}
+
+a#contactpage {
+    grid-row: 2;
+    grid-column: 5;
+}
+
+a#lorempage {
+    grid-row: 2;
+    grid-column: 6;
+}
+
+div.content {
+    display: grid;
+    grid-template-rows: 930px 400px 100vh;
+}
+
+div.mainimg {
+    grid-row: 1;
+    grid-column: 1;
+    display: grid;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(13,1fr);
+    background-color: rgb(73, 25, 25);
+}
+
+div.mainimg a :first-child {
+    font-size: 48px;
+    color: rgba(0, 0, 0, 0.54);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration: none;
+}
+
+div.mainimg a {
+    grid-row: 9;
+    grid-column: 7;
+    text-decoration: none;
+}
+
+main {
+    background-color: hotpink;
+}
+/* #endregion */
+
 @media only screen and (max-device-width: 455px) {
    
     /* #General rules */
@@ -89,8 +197,29 @@
         display:flex;
         justify-content: center;
         align-items: center; 
-
+        grid-column: 1;
     }
+
+    a#startpage {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    a#infopage {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    a#contactpage {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    a#lorempage {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
     /* #endregion */
     /* End of general rules */
     
@@ -112,8 +241,6 @@
     }
 
      div.mainimg a :first-child {
-        grid-row: 8/9;
-        grid-column: 4/5;
         font-size: 48px;
         color: rgba(0, 0, 0, 0.54);
         display:flex;
@@ -125,11 +252,6 @@
      div.mainimg a {
         grid-row: 8/9;
         grid-column: 4/5;
-        font-size: 48px;
-        color: rgba(0, 0, 0, 0.54);
-        display:flex;
-        justify-content:center;
-        align-items:center;
         text-decoration: none;
     }
 
@@ -359,78 +481,3 @@
     /* End of rules for info.html */
 
 }
-
-/* Desktop */
-body {
-    background-color: rgb(180, 180, 180);
-    height: auto;
-    width: 100vw;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-} 
-
-div.wrapper {
-    /* display: grid; */
-    height: inherit;
-    width: inherit;
-    grid-template-rows: 80px auto;
-}
-
-header.mobile {
-    display: none;
-}
-
-header.desktop {
-    height: 80px;
-    background-color: white;
-    display: grid;
-    grid-template-rows: 0px 1fr 0px;
-    grid-template-columns: repeat(7, 1fr);
-}
-
-.navlink {
-    font-size: 12px;
-    height: 54px;
-    text-decoration: none;
-    color: black;
-    display:flex;
-    justify-content: center;
-    align-items: center; 
-}
-
-header.desktop a:first-of-type {
-    grid-row: 2;
-    grid-column: 4;
-    /* padding-left: 48.75px; */
-}
-
-div.hamburgermenu {
-    display: none;
-}
-
-a#startpage {
-    grid-row: 2;
-    grid-column: 2;
-}
-
-a#infopage {
-    grid-row: 2;
-    grid-column: 3;
-}
-
-a#contactpage {
-    grid-row: 2;
-    grid-column: 5;
-}
-
-a#lorempage {
-    grid-row: 2;
-    grid-column: 6;
-}
-
-div.content {
-    display: none;
-}
-
-
-
