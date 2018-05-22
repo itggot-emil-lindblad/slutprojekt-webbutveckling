@@ -28,6 +28,7 @@ header.desktop {
     grid-template-columns: repeat(7, 1fr);
     position: fixed;
     top: 0px;
+    box-shadow: 0px 4px 4px -1px rgba(0,0,0,0.75);
 }
 
 .navlink {
@@ -73,8 +74,10 @@ a#lorempage {
 }
 
 div.content {
+    width: inherit;
     display: grid;
-    grid-template-rows: 930px 400px 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 930px 440px 100vh;
 }
 
 div.mainimg {
@@ -102,12 +105,86 @@ div.mainimg a {
 }
 
 main {
-    background-color: hotpink;
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    background-color: white;
+}
+
+main h1 {
+    grid-row: 3/4;
+    grid-column: 2/10;
+    color: black;
+    text-align: center;
+}
+
+ main p {
+    grid-row: 4/9;
+    grid-column: 3/9;
+}
+
+a.verksamhetbtn {
+    border-color: black;
+    border: solid 2px;
+    border-radius: 30px;
+    grid-row: 7;
+    grid-column: 4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+ a.infobtn {
+    border-color: black;
+    border: solid 2px;
+    border-radius: 30px;
+    grid-row: 7;
+    grid-column: 7/8;
+    color: black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+div.news {
+    height: 100vh;
+    grid-row: 3;
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 0px 50px repeat(3, 1fr) 0px;
+    grid-row-gap: 30px;
+    overflow: auto;
+}
+
+div.news h1 {
+    grid-row: 2;
+    grid-column: 4/6;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+div.article {
+    display: block;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+}
+
+div#article1 {
+    grid-row: 3/5;
+    grid-column: 2/4;
 }
 /* #endregion */
 
 @media only screen and (max-device-width: 455px) {
-   
     /* #General rules */
     /* #region */
     body {
@@ -363,6 +440,7 @@ main {
         grid-column: 3/7;
         text-align: center;
     }
+
     .contactbtn {
         border-color: white;
         border: solid 2px;
