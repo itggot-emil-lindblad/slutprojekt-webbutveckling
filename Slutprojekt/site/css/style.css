@@ -6,6 +6,7 @@ body {
     width: 100vw;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 } 
 
 div.wrapper {
@@ -57,6 +58,10 @@ a#startpage {
     grid-column: 2;
 }
 
+a#startpage:hover {
+    color: black;
+}
+
 a#infopage {
     grid-row: 2;
     grid-column: 3;
@@ -76,16 +81,17 @@ div.content {
     width: inherit;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 930px 440px 100vh;
+    grid-template-rows: 80px 870px 440px 100vh;
 }
 
 div.mainimg {
-    grid-row: 1;
+    grid-row: 2;
     grid-column: 1;
     display: grid;
     grid-template-rows: repeat(9, 1fr);
     grid-template-columns: repeat(13,1fr);
-    background-color: rgb(73, 25, 25);
+    background-image: url('../img/vallhamrakyrkan-forsamling-goteborg-savedalen-kyrka-vallhamra-3.jpg');
+    background-repeat: no-repeat;
 }
 
 div.mainimg a :first-child {
@@ -104,6 +110,7 @@ div.mainimg a {
 }
 
 main {
+    grid-row: 3;
     display: grid;
     grid-template-rows: repeat(8, 1fr);
     grid-template-columns: repeat(10, 1fr);
@@ -152,7 +159,7 @@ a.verksamhetbtn {
 
 div.news {
     height: 100vh;
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 1;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -250,12 +257,93 @@ footer div.line {
 }
 
 div.tabs {
+    margin-top: 80px;
+    padding-left: 25%;
+    padding-right: 25%;
     background-color: #f0f0f0;
-    width: 100vw;
+    /* width: 100vw; */
     height: 60px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(1, 1fr);
+}
+
+div.navtab {
+    grid-column: span 1;
+    font-family: 'Roboto', san-serif;
+    font-size: 8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color: rgba(0, 0, 0, 0.54);
+    border-top: solid 2px rgba(255, 255, 255, 0);
+    border-bottom: solid 2px rgba(255, 255, 255, 0);
+}
+
+.navtab.active {
+    background-color: white;
+    border-bottom: solid 2px black;
+}
+
+.infopage.active {
+    display: grid;
+    height: 800px;
+}
+
+div#personal {
+    width: 100vw;
+    background-color: aqua;
+    grid-template-columns: repeat(9, 150px);
+    grid-template-rows: repeat(10, 70px);
+    grid-column-gap: 50px;
+    background-image: url('../img/backgroundflowers.jpg')
+    
+}
+
+div.infopage {
+    display: none;
+    background-image: url('../img/backgroundflowers.jpg')
+}
+
+div.staffbio {
+    height: 350px;
+    width: 150px;
+}
+
+div#lena {
+    grid-column: 4;
+    grid-row: 2/6;
+}
+
+div#sara {
+    grid-column: 5;
+    grid-row: 2/6;
+}
+
+div#camilla {
+    grid-column: 6;
+    grid-row: 2/6;
+}
+
+div#elin {
+    grid-column: 7;
+    grid-row: 2/6
+}
+
+div#tider {
+    background-image: url('../img/backgroundflowers.jpg');
+    grid-template-columns: 480px 1fr 1fr 1fr 480px;
+    grid-template-rows: repeat(5,1fr);
+    
+}
+
+div.closedhours {
+    grid-column: 3;
+    width: 960px;
+}
+
+div.contactinfo {
+    height: 1000px;
 }
 
 
@@ -570,7 +658,10 @@ div.tabs {
     /* Rules for info.html */
     /* #region */
     div.tabs {
+        margin-top: 0;
         background-color: #f0f0f0;
+        padding-left: 0;
+        padding-right: 0;
         width: 100vw;
         height: 60px;
         display: grid;
@@ -594,10 +685,8 @@ div.tabs {
     .navtab.active {
         background-color: white;
         border-bottom: solid 2px black;
-
     }
 
-    
     .infopage.active {
         display: grid;
         height: 1000px;
@@ -607,10 +696,12 @@ div.tabs {
         background-color: aqua;
         grid-template-columns: repeat(9, 50px);
         grid-template-rows: repeat(13, 70px);
-        
+        grid-column-gap: 0;  
+        background-image: url('../img/backgroundflowers.jpg')
     }
     div.infopage {
         display: none;
+        background-image: url('../img/backgroundflowers.jpg')
     }
 
     div.staffbio {
@@ -637,7 +728,44 @@ div.tabs {
         grid-column: 6/8;
         grid-row: 8/12;
     }
+
+    div#tider {
+        background-image: url('../img/backgroundflowers.jpg');
+        grid-template-columns: 60px auto 60px;
+        grid-template-rows: repeat(5,1fr);
+    }
+
+    div.closedhours {
+        grid-column: 2;
+        width: inherit;
+    }
     /* #endregion */
     /* End of rules for info.html */
+    div.contactinfo {
+        height: 1000px;
+        display: grid;
+        grid-template-rows: repeat(12,1fr);
+        grid-template-columns: repeat(8, 1fr);
+    }
 
+    div.contactinfo h2 {
+        grid-row: 1;
+        grid-column: 3/7;
+        text-align: center
+    }
+
+    div.adress {
+        grid-row: 2/4; 
+        grid-column: 5;
+    }
+
+    #adress {
+        font-size: 48px;
+        grid-row: 2;
+        grid-column: 3/4;
+        text-align: center;
+        display: flex;
+        align-content: center;
+        justify-items: center;
+    }
 }
