@@ -90,7 +90,7 @@ div.mainimg {
     display: grid;
     grid-template-rows: repeat(9, 1fr);
     grid-template-columns: repeat(13,1fr);
-    background-image: url('../img/vallhamrakyrkan-forsamling-goteborg-savedalen-kyrka-vallhamra-3.jpg');
+    background-image: url('../img/mainimg.jpg');
     background-repeat: no-repeat;
 }
 
@@ -182,6 +182,10 @@ div.article {
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 10px;
+}
+
+div.article h2 {
+    text-align: center;
 }
 
 div#article1 {
@@ -283,20 +287,23 @@ div.navtab {
 .navtab.active {
     background-color: white;
     border-bottom: solid 2px black;
+    color: black;
 }
 
 .infopage.active {
     display: grid;
-    height: 800px;
+    height: 810px;
 }
 
 div#personal {
     width: 100vw;
     background-color: aqua;
-    grid-template-columns: repeat(9, 150px);
+    grid-template-columns: 0px repeat(4, 150px) 0px;
     grid-template-rows: repeat(10, 70px);
-    grid-column-gap: 50px;
-    background-image: url('../img/backgroundflowers.jpg')
+    grid-column-gap: 72px;
+    background-image: url('../img/backgroundflowers.jpg');
+    padding-left: 25%;
+    padding-right: 25%;
     
 }
 
@@ -311,22 +318,22 @@ div.staffbio {
 }
 
 div#lena {
-    grid-column: 4;
+    grid-column: 2;
     grid-row: 2/6;
 }
 
 div#sara {
-    grid-column: 5;
+    grid-column: 3;
     grid-row: 2/6;
 }
 
 div#camilla {
-    grid-column: 6;
+    grid-column: 4;
     grid-row: 2/6;
 }
 
 div#elin {
-    grid-column: 7;
+    grid-column: 5;
     grid-row: 2/6
 }
 
@@ -343,7 +350,33 @@ div.closedhours {
 }
 
 div.contactinfo {
-    height: 1000px;
+    margin-top: 80px;
+    height: 607px;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 5%;
+    background-image: url('../img/backgroundflowers.jpg');
+    text-align: center;
+}
+
+div.contactinfo h2 {
+    font-size: 38px;
+}
+
+div.adress {
+    font-size: 28px;
+}
+
+div.phone {
+    font-size: 28px;
+}
+
+div.mail {
+    font-size: 28px;
+}
+
+div.contactinfo i {
+    font-size: 52px;
 }
 
 
@@ -505,6 +538,7 @@ div.contactinfo {
         grid-template-rows: repeat(10, 1fr);
         grid-template-columns: repeat(10, 1fr);
         font-family: 'Roboto', sans-serif;
+        
     }
 
      main h1 {
@@ -697,7 +731,9 @@ div.contactinfo {
         grid-template-columns: repeat(9, 50px);
         grid-template-rows: repeat(13, 70px);
         grid-column-gap: 0;  
-        background-image: url('../img/backgroundflowers.jpg')
+        background-image: url('../img/backgroundflowers.jpg');
+        padding-left: 0;
+        padding-right: 0;
     }
     div.infopage {
         display: none;
@@ -741,11 +777,18 @@ div.contactinfo {
     }
     /* #endregion */
     /* End of rules for info.html */
+
     div.contactinfo {
-        height: 1000px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-top: 0;
+        height: 542px;
         display: grid;
-        grid-template-rows: repeat(12,1fr);
+        grid-template-rows: repeat(9,1fr);
         grid-template-columns: repeat(8, 1fr);
+        background-image: url('../img/backgroundflowers.jpg');
+        text-align: unset;
     }
 
     div.contactinfo h2 {
@@ -755,17 +798,44 @@ div.contactinfo {
     }
 
     div.adress {
-        grid-row: 2/4; 
-        grid-column: 5;
+        grid-row: 2/5; 
+        grid-column: 3/8;
+        font-size: 24px;
     }
 
     #adress {
         font-size: 48px;
-        grid-row: 2;
-        grid-column: 3/4;
+        grid-row: 3;
+        grid-column: 2/3;
         text-align: center;
         display: flex;
         align-content: center;
         justify-items: center;
+    }
+
+    #phone {
+        font-size: 48px;
+        grid-column: 2;
+        grid-row: 6;
+    }
+
+    div.phone {
+        grid-row: 5/7; 
+        grid-column: 3/8;
+        font-size: 24px;
+    }
+
+    #mail {
+        font-size: 48px;
+        grid-column: 2;
+        grid-row: 8;
+        text-align: center; 
+    }
+
+    div.mail {
+        grid-row: 8;
+        grid-column: 3/7;
+        text-align: center;
+        font-size: 17px;
     }
 }
